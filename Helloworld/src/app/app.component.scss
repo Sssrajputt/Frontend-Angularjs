@@ -1,6 +1,21 @@
+.error-output {
+  margin-left: 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: red;
+}
 img {
     display: block;
     margin: 0 auto;
-    width: 500px; /* Add 'px' to specify the unit */
+    width: 150px; /* Adjust this value for the desired size */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  input {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* Adjust this value for the desired width */
+    padding: 8px; /* Add padding for better user experience */
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: center; /* Center the text inside the input field */
   }
   

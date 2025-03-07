@@ -1,12 +1,20 @@
-<div>
-  <h1>Hello {{ userName || 'Shubham' }} from BridgeLabz</h1>
+<div style="text-align: center;">
+  <h1>
+    <!-- Display user input dynamically; if no input, show default text -->
+    {{ userName ? 'Hello ' + userName + ' from BridgeLabz' : 'Hello from BridgeLabz' }}
+  </h1>
   <img 
     [src]="imgUrl" 
+    (click)="onClick($event)" 
     alt="The BridgeLabz logo: a Bridge to Employment through a Lab Works."
-    (click)="onClick($event)"
+    style="width: 150px; height: auto; margin-bottom: 10px;"
+  />
+  <input 
+    type="text" 
+    (input)="onInputChange($event)" 
+    [(ngModel)]="userName" 
+    placeholder="Enter your name"
+    style="display: block; margin: 10px auto; width: 200px; padding: 8px; font-size: 16px; text-align: center;"
   />
 </div>
-<div>
-  <input [(ngModel)]="userName" placeholder="Enter your name" /> <br /><br />
-</div>
-
+<p *ngIf="nameError" class="error-output">{{ nameError }}</p>
